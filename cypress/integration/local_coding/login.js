@@ -25,7 +25,7 @@ describe("проверка страницы логина", () => {
       })
   })
   describe("используем метод find, then, clear, wait, each", () => {
-      it("поиск текста приветствия через метод find", () => {
+      it("поиск текста приветствия через метод find", () => {//вот так
           cy.get(loginPage.selectors.authForm)
               .find(loginPage.selectors.titleText)
               .invoke("text")
