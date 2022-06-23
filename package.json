@@ -1,0 +1,16 @@
+{
+  "name": "new_project1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "run:cy": "cypress open",
+    "run:headless": "cypress run"
+  },
+  "keywords": [],
+  "author": "YA",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cypress": "^9.6.1"
+  }
+}

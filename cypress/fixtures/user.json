@@ -1,0 +1,30 @@
+{
+  "_id": "5de758e6d889cf003c55099a",
+  "name": "Victor Medvedev",
+  "firstName": "Victor",
+  "lastName": "Medvedev",
+  "links": {
+    "linkedIn": null,
+    "resume": "https://docs.google.com/document/d/1AkAea18ZiiGcqJOLYPprmUAkXenXTvBDMWVgajQYqm8/edit",
+    "github": "https://github.com/MedvedevVictor",
+    "facebook": "https://www.facebook.com/viktor.medvedev.33",
+    "codewarsUsername": "VictorMedvedev",
+    "slackMemberId": "UUEKJFMGR"
+  },
+  "fulfilled": false,
+  "englishLevel": "Pre-Intermediate",
+  "about": "last 2 months i trying to learn python (and 3 months in js)",
+  "goals": "To find job in IT",
+  "roles": [
+    "student"
+  ],
+  "groups": [
+    {
+      "_id": "5e671627ba4754003c835f1e",
+      "name": "QA6"
+    }
+  ],
+  "achievement": {
+    "totalCoins": 7
+  }
+}

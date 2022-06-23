@@ -1,0 +1,116 @@
+{
+  "message": "Search challenges ok",
+  "success": true,
+  "fail": false,
+  "payload": {
+    "pager": {
+      "pageCurrent": 1,
+      "limit": 30,
+      "pageCount": 57,
+      "itemsCount": 1706,
+      "isFirst": true,
+      "isLast": false
+    },
+    "items": [
+      {
+        "_id": "62a085ce910b9d778b9c2ba7",
+        "name": "ТЕСТ ОДИН ЕПТИ",
+        "instruction": "Напишите функцию removeExtraSpaces, которая получает строку и удаляет в строке все лишние пробелы (то есть серии подряд идущих пробелов надо заменить на одиночные пробелы, а крайние пробелы в строке надо удалить). Функция возвращает строку без лишних пробелов.\n\nНапример:\n\n`removeExtraSpaces(\"   have a     nice    day    \")` -> `\"have a nice day\"`.",
+        "initialSolution": " ",
+        "completedSolution": "function removeExtraSpaces(str){\nlet res = \"\";\n let start = true;\n let afterWord = false;\n for (let i = 0; i < str.length; i++){\n   if ( str[i] === ' ' && (str[i - 1] === undefined || str[i + 1] === \" \" || str[i + 1] === undefined || res.length === 0)) {\n     continue;\n   } else {\n     res = res + str[i];\n   }\n }\n return res;\n} \n",
+        "openTest": "it('Создана функция removeExtraSpaces', () => {\n  expect(removeExtraSpaces).to.be.a(\"function\");\n});\n\nit('Функция работает корректно при `\"   have a     nice    day    \"`', () => {\n  expect(removeExtraSpaces(\"   have a     nice    day    \")).eq(\"have a nice day\");\n});\n\nit('Функция работает корректно при `\"  let   the  sun shining        brightly \"`', () => {\n  expect(removeExtraSpaces(\"  let   the  sun shining        brightly \")).eq(\"let the sun shining brightly\");\n});\n\nit('Функция работает корректно при `\"good   deal    \"`', () => {\n  expect(removeExtraSpaces(\"good   deal    \")).eq(\"good deal\");\n});",
+        "showOpenTest": true,
+        "hiddenTest": "",
+        "sourceLang": "ru",
+        "checker": "unit",
+        "programmingLang": "JavaScript",
+        "level": "Easy",
+        "status": "review",
+        "active": false,
+        "owner": {
+          "_id": "5ef0755eb10ab1003cd9a09a",
+          "name": "Larisa Yagodina"
+        },
+        "validated": {
+          "validatedAt": "2022-06-08T16:27:10Z",
+          "validatedBy": {
+            "_id": "5ef0755eb10ab1003cd9a09a",
+            "name": "Larisa Yagodina"
+          }
+        },
+        "commentsCount": 0,
+        "createdAt": "2022-06-08T11:19:42.926Z",
+        "updatedAt": "2022-06-08T16:27:17.908Z",
+        "__v": 0,
+        "hint": "",
+        "done": false
+      },
+      {
+        "_id": "62a0830f910b9d778b9c19ee",
+        "name": "ТЕСТ ДВА ЕПТИ",
+        "instruction": "Напишите функцию countIncludedSubstring, которая получает строку и возвращает число - количество вхождений 'aba' в эту строку. \n\nНапример:\n\n`countIncludedSubstring(\"abc abb aba jfk\")` -> `1`;\n\n`countIncludedSubstring(\"acaba ogulrd babail\")` -> `2`.\n",
+        "initialSolution": " countIncludedSubstring",
+        "completedSolution": "function countIncludedSubstring(str){\n let count = 0;\n let i = 0;\n while (i < str.length) {\n   if (str[i] === \"a\" && str[i + 1] === \"b\" && str[i + 2] === \"a\" ) {\n     count++\n     i += 3;\n   } else {\n     i++;\n   }\n }\n return count;\n} ",
+        "openTest": "it('Создана функция countIncludedSubstring', () => {\n  expect(countIncludedSubstring).to.be.a(\"function\");\n});\n\nit('Функция работает корректно при `\"abc abb aba jfk\"`', () => {\n  expect(countIncludedSubstring(\"abc abb aba jfk\")).eq(1);\n});\n\nit('Функция работает корректно при `\"acaba ogulrd babail\"`', () => {\n  expect(countIncludedSubstring(\"acaba ogulrd babail\")).eq(2);\n});\n\nit('Функция работает корректно при `\"great to hear\"`', () => {\n  expect(countIncludedSubstring('great to hear')).eq(0);\n});\n  ",
+        "showOpenTest": true,
+        "hiddenTest": "",
+        "sourceLang": "ru",
+        "checker": "unit",
+        "programmingLang": "JavaScript",
+        "level": "Easy",
+        "status": "review",
+        "active": false,
+        "owner": {
+          "_id": "5ef0755eb10ab1003cd9a09a",
+          "name": "Larisa Yagodina"
+        },
+        "validated": {
+          "validatedAt": "2022-06-08T11:18:36Z",
+          "validatedBy": {
+            "_id": "5ef0755eb10ab1003cd9a09a",
+            "name": "Larisa Yagodina"
+          }
+        },
+        "commentsCount": 0,
+        "createdAt": "2022-06-08T11:07:59.625Z",
+        "updatedAt": "2022-06-08T11:18:43.513Z",
+        "__v": 0,
+        "hint": "",
+        "done": false
+      },
+      {
+        "_id": "62a07f59910b9d778b9c0663",
+        "name": "ТЕСТ ТРИ ЕПТИ",
+        "instruction": "Напишите функцию removeAbc, которая получает строку и удаляет в этой строке все 'abc', за которыми следует цифра. Функция возвращает полученную новую строку.\n\nНапример:\n\n`removeAbc(\"32iabc4nnp\")` -> `\"32i4nnp\"`;\n\n`removeAbc(\"abcdeaf\")` -> `\"abcdeaf\"`.\n",
+        "initialSolution": " ",
+        "completedSolution": "function removeAbc(str){\n let res = '';\n let i = 0;\n while (i < str.length) {\n   if (str[i] === \"a\" && str[i + 1] === \"b\" && str[i + 2] === \"c\" && /[0-9]/.test(str[i + 3])) {\n     i += 3;\n   } else {\n     res = res + str[i];\n     i++;\n   }\n }\n return res;\n} ",
+        "openTest": "it('Создана функция removeAbc', () => {\n  expect(removeAbc).to.be.a(\"function\");\n});\n\nit('Функция работает корректно при `32iabc4nnp`', () => {\n  expect(removeAbc('32iabc4nnp')).eq('32i4nnp');\n});\n\nit('Функция работает корректно при `abcdeaf`', () => {\n  expect(removeAbc('abcdeaf')).eq('abcdeaf');\n});\n\nit('Функция работает корректно при `abc456`', () => {\n  expect(removeAbc('abc456')).eq('456');\n});\n  \nit('Функция работает корректно при `5abcfo`', () => {\n  expect(removeAbc('5abcfo')).eq('5abcfo');\n});",
+        "showOpenTest": true,
+        "hiddenTest": "",
+        "sourceLang": "ru",
+        "checker": "unit",
+        "programmingLang": "JavaScript",
+        "level": "Easy",
+        "status": "review",
+        "active": false,
+        "owner": {
+          "_id": "5ef0755eb10ab1003cd9a09a",
+          "name": "Larisa Yagodina"
+        },
+        "validated": {
+          "validatedAt": "2022-06-08T11:07:27Z",
+          "validatedBy": {
+            "_id": "5ef0755eb10ab1003cd9a09a",
+            "name": "Larisa Yagodina"
+          }
+        },
+        "commentsCount": 0,
+        "createdAt": "2022-06-08T10:52:09.409Z",
+        "updatedAt": "2022-06-08T11:07:36.182Z",
+        "__v": 0,
+        "hint": "Чтобы проверить строку, есть ли в ней цифры, можно воспользоваться регулярным выражением и методом -  /[0-9]/.test(\"checked string or peace of string\")",
+        "done": false
+      }
+    ]
+  }
+}
