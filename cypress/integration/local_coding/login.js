@@ -36,7 +36,7 @@ describe("проверка страницы логина", () => {
               .find(loginPage.selectors.titleText)
               .invoke("text")
               .then(el => {
-                  expect(el).contains("Welcome");
+                  expect(el).contains("Welcome");//типа здрасьте
               });
       });
       it("удаление текста через метод clear", () => {
