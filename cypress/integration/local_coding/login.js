@@ -49,6 +49,7 @@ describe("проверка страницы логина", () => {
               .invoke("val")
               .should("eq","");
       });
+      //опа
       it("юзаем wait", () => {
           cy.get(loginPage.selectors.loginInput)
               .type(loginPage.inputText.loginLatin)
