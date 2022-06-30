@@ -72,6 +72,7 @@ describe("проверка страницы логина", () => {
               });
       });
       //как-то так
+      //а вот и еще один коммент
       it.only("логин функция", () => {
         loginPage.loginFunction(loginPage.inputText.passTestFalse,loginPage.inputText.passTestFalse);
       });
