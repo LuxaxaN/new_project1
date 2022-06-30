@@ -71,6 +71,7 @@ describe("проверка страницы логина", () => {
                       });
               });
       });
+      //как-то так
       it.only("логин функция", () => {
         loginPage.loginFunction(loginPage.inputText.passTestFalse,loginPage.inputText.passTestFalse);
       });
