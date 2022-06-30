@@ -38,6 +38,7 @@ describe("проверка страницы логина", () => {
               .then(el => {
                   expect(el).contains("Welcome");//вы кто такие, я вас не звал, идите нахуй
               });
+          //а как на счет еще одного ненужного коммента
       });
       it("удаление текста через метод clear", () => {
           cy.get(loginPage.selectors.loginInput)
