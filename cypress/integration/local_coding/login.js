@@ -38,6 +38,7 @@ describe("проверка страницы логина", () => {
               .then(el => {
                   expect(el).contains("Welcome");//вы кто такие, я вас не звал, идите нахуй
               });
+          //а как на счет еще одного ненужного коммента
       });
       it("удаление текста через метод clear", () => {
           cy.get(loginPage.selectors.loginInput)
@@ -49,6 +50,7 @@ describe("проверка страницы логина", () => {
               .invoke("val")
               .should("eq","");
       });
+      //опа
       it("юзаем wait", () => {
           cy.get(loginPage.selectors.loginInput)
               .type(loginPage.inputText.loginLatin)
@@ -71,6 +73,8 @@ describe("проверка страницы логина", () => {
                       });
               });
       });
+      //как-то так
+      //а вот и еще один коммент
       it.only("логин функция", () => {
         loginPage.loginFunction(loginPage.inputText.passTestFalse,loginPage.inputText.passTestFalse);
       });
